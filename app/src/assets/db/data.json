@@ -1,0 +1,11 @@
+{
+    "utilisateur": "mnb",
+    "password": "mnb",
+    "todoListes": [{
+      "name": "Devoir IPI",
+      "elements": ["Apprendre Ajax", "Etudier Javascript"]
+    }, {
+      "name": "Perso",
+      "elements": ["Se lever", "Se doucher"]
+    }]
+  }

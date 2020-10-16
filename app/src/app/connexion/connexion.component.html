@@ -1,0 +1,42 @@
+<div class=" row d-flex justify-content-center">
+    <div class="col-md-3  border border-secondary col-sm-10 pb-5 m-5  p-0 bg-light rounded">
+        <h2 class="mt-4">Sign up</h2>
+        <div class="d-flex flex-column col-11 m-3  mt-5 py-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Name</mat-label>
+                <input matInput placeholder="Your name" required [(ngModel)]="Susername" name="Susername">
+                <mat-hint *ngIf="username==null" class="text-danger mt-0 mb-2"> Username Required !</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Password</mat-label>
+                <input matInput placeholder="Your Password" required [(ngModel)]="Spassword" name="Spassword">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm Your Password</mat-label>
+                <input matInput placeholder="Renter Password" required [(ngModel)]="confpassword" name="Sconfirm"
+                    (keyup)="check(Susername,Spassword,confpassword)">
+                <mat-hint *ngIf="disabled" class="text-danger mt-0 mb-2"> Don't match !</mat-hint>
+            </mat-form-field>
+            <button mat-stroked-button color="primary" (click)="signup(Susername, Spassword)"
+                class="py-1 mt-3">Sign up</button>
+
+        </div>
+    </div>
+    <div class=" offset-md-2 col-md-3  border border-secondary col-sm-10 pb-5 m-5  p-0 bg-light rounded">
+        <h2 class="mt-4" >Log in</h2>
+        <div class="d-flex flex-column col-11 m-3 mt-5 py-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Name</mat-label>
+                <input matInput placeholder="Your name" required [(ngModel)]="username" name="username">
+                <mat-hint *ngIf="username==null" class="text-danger mt-0 mb-2"> Username Required !</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Password</mat-label>
+                <input matInput placeholder="Your Password" required [(ngModel)]="password" name="name">
+            </mat-form-field>
+
+            <button mat-stroked-button color="primary" (click)="singin(username, password)"
+                class="py-1 mt-3">Log in</button>
+
+        </div>
+</div>

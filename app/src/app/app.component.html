@@ -1,0 +1,13 @@
+<mat-toolbar color="primary"><span class="text-light">Bienvenue sur ton ToDoList</span>
+    <div class="d-flex ml-auto">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #search>
+        </form>
+    </div>
+</mat-toolbar>
+<div [ngSwitch]="auth">
+    <app-connexion *ngSwitchCase="false" (status)="show()"></app-connexion>
+    <div *ngSwitchCase="true">
+        <app-todo class="container" [search]="search.value" (deconnexion)="deconnecte()"></app-todo>
+    </div>
+</div>
